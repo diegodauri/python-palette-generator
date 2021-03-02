@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Palette</title>
+</head>
+<body>
+    <h1>Here's your image's palette!</h1>
+    <img src="{{ image_url }}">
+    <br>
+    {% for color in palette %}
+    <div style="height: 100px;
+  width: 100px;
+  background-color: rgb{{color[1]}};
+  display: inline-block;
+"><p>{{color[1]}}</p></div>
+    {% endfor %}
+</body>
+</html>
